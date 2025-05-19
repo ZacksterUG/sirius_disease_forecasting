@@ -1,0 +1,13 @@
+{
+    "window": 100,
+    "horizon": 31,
+    "cols": [
+        "infected_daily",
+        "day_of_week",
+        "month",
+        "quarter",
+        "is_weekend",
+        "season",
+        "day_of_year"
+    ]
+}
