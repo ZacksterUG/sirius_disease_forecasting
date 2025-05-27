@@ -59,15 +59,19 @@ export default function Forecast() {
             <div className="container">
                 <div className="items">
                     <div className="controls">
-                      <div>
+                      <div className="part">
                         <label>Количество прогнозируемых дней: </label>
                         <input type="number" value={horizon} step="1" min="1" max="31" onChange={(e) => setHorizon(e.target.value)}/>
                       </div>
+                      <div className="part">
+                        <label>Выберите болезнь: </label>
                       <select value={disease} onChange={(e) => setDisease(e.target.value)}>
                         <option value="covid19">Covid-19</option>
                         <option value="pneumania">Вирусная пневмония</option>
                       </select>
-                      <div>
+                      </div>
+                      <div className="part-button">
+                    
                         <button onClick={fetchData}>
                           Спрогнозировать
                         </button>

@@ -1,25 +1,114 @@
+:root {
+  --medical-blue: #0891b2;
+  --medical-light: #ecfeff;
+  --medical-dark: #164e63;
+  --medical-accent: #06b6d4;
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 2rem;
 }
 
-.container .items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-    justify-content: center;
-    border-style: solid;
-    border-width: 1px;
+.items {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(18, 185, 215, 0.2);
+  margin-top: 1.5rem;
+}
+
+.chart-container {
+  height: 30em;
+  width: 100%;
+  background: var(--medical-light);
+  border-radius: 12px;
+  border: 1px solid rgba(6, 182, 212, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Медицинские элементы дизайна */
+.medical-header {
+  color: var(--medical-dark);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.medical-header::before {
+  content: "🩺";
+  font-size: 1.2em;
+}
+
+/* Современные кнопки */
+.medical-btn {
+  background: var(--medical-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medical-btn:hover {
+  background: var(--medical-dark);
+  transform: translateY(-1px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .items {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .chart-container {
+    height: 25em;
+  }
+}
+.container .items .controls{
+  width: 100%;
+}
+.container .items .controls .part{
+padding: 15px;
+}
+.container .items .controls .part-button{
+  display: flex; flex-direction: row;
+  justify-content: flex-end;
+}
+button {
+    padding: 14px;
     margin-top: 20px;
-    padding: 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.container .items .chart {
-    height: 30em;
-    width: 100%;
+button:hover {
+    background: #5a6fcf;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }

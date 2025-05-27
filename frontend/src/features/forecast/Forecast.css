@@ -3,8 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
+    background: #f0f9ff; /* Светло-голубой фон */
+    font-family: 'Inter', Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container .items {
@@ -13,13 +17,54 @@
     align-items: center;
     width: 60%;
     justify-content: center;
-    border-style: solid;
-    border-width: 1px;
+    background: white;
+    border: 1px solid #bae6fd; /* Мягкая голубая граница */
+    border-radius: 12px; /* Скругленные углы */
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.1); /* Бирюзовая тень */
+    transition: all 0.3s ease;
+}
+
+.container .items:hover {
+    box-shadow: 0 6px 24px rgba(6, 182, 212, 0.15); /* Усиление тени при наведении */
 }
 
 .container .items .chart {
     height: 30em;
     width: 100%;
+    background: #f8fafc; /* Очень светлый фон для графика */
+    border-radius: 8px; /* Скругление для графика */
+    border: 1px solid #e0f2fe; /* Светлая граница */
+}
+
+/* Дополнительные элементы для медицинской тематики */
+.container .items::before {
+    content: "🩺 Медицинская аналитика";
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #0891b2; /* Бирюзовый цвет */
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+/* Стили для возможных кнопок (если будут добавлены) */
+.container .items .medical-btn {
+    background: linear-gradient(to right, #06b6d4, #3b82f6);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.container .items .medical-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 }

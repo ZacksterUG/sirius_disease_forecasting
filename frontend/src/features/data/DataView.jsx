@@ -28,21 +28,26 @@ export default function DataView() {
             <div className="container">
                 <div className="items">
                     <div className="controls">
-                      <div>
+                      <div className="part">
                         <label>С: </label>
                         <input type="date" value={fromDate} onChange={(e) => setFromDate(e.target.value)}/>
                       </div>
-                      <div>
+                      <div className="part">
                         <label>По: </label>
                         <input type="date" value={toDate} onChange={(e) => setToDate(e.target.value)}/>
                       </div>
+                      <div className="part">
+                        <label>Выберите болезнь: </label>
                       <select value={disease} onChange={(e) => setDisease(e.target.value)}>
                         <option value="covid19">Covid-19</option>
                         <option value="pneumania">Вирусная пневмония</option>
                       </select>
-                      <button onClick={fetchData}>
+                      <div className="part-button">
+                    <button onClick={fetchData}>
                         Просмотр
                       </button>
+                      </div>
+                      </div>
                     </div>
 
                     <div className="chart">

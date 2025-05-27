@@ -1,7 +1,48 @@
-
-
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(to bottom, #f0f9ff, #e0f2fe); /* Голубой градиент */
+  color: #083344; /* Тёмно-синий для текста */
+}
+
+/* Дополнительные элементы для современного стиля */
+.header {
+  background: rgba(6, 182, 212, 0.9); /* Бирюзовый */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 1rem;
+  border: 1px solid rgba(6, 182, 212, 0.2); /* Лёгкая бирюзовая рамка */
+}
+
+.button {
+  background: linear-gradient(to right, #06b6d4, #0ea5e9); /* Бирюзово-голубой градиент */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+/* Для графиков/прогнозов */
+.chart-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
 }
